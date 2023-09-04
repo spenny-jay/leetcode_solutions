@@ -6,7 +6,8 @@ class Solution:
         if n <= 3: return n
         # used to memoize results
         dp = [0] * n
-        # initialize dp (dp[0] represents 1 stair, dp[1] represents 2 stairs)
+        # initialize dp (dp[0] represents 1 stair, dp[1] represents 2 stairs, ... 
+        # dp[n] represents n stairs)
         dp[0] = 1
         dp[1] = 2
         # Every step count is a combination between the prior two
