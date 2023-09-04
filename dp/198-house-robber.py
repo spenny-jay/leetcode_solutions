@@ -13,7 +13,7 @@ class Solution:
         dp[1] = nums[0]
         for i in range(1, len(nums)):
             # either choose the adjacent location and maintain its optimal cost
-            # or include the current house cost plus the house 2 indexes away
+            # or include the current house cost plus the cost 2 indexes prior
             dp[i + 1] = max(dp[i], nums[i] + dp[i - 1])
 
         return dp[-1]
