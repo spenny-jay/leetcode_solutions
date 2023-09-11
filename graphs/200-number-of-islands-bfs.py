@@ -29,6 +29,7 @@ class Solution:
             for col in range(COLS):
                 # check if the coordinate is an island an somewhere we have not yet visisted
                 if (row, col) not in visited and grid[row][col] == "1":
-                    islands += 1 + bfs(row, col)
+                    bfs(row, col)
+                    islands += 1
 
         return islands
