@@ -20,8 +20,8 @@ class Solution:
         if not fast:
             return slow.next
 
-        # goal: now that fast is exactly n nodes ahead, we keep iterating
-        # until fast reaches the end of the list.
+        # goal: Now that we have a gap of n node, once fast reaches the end, 
+        # slow will be n nodes away from the end (AKA fast)
         while fast and fast.next:
             fast = fast.next
             slow = slow.next
